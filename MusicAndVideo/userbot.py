@@ -93,7 +93,7 @@ async def repo(client, m: Message):
     REPO = f"""
 <b>👋 Hallo {m.from_user.mention}!
 
-🎶 Music Dan Video Player UserBot
+🎶 HEY I AM NIKHIL USER BOT
 
 🤖 Telegram UserBot Untuk Memutar Lagu Dan Video Di Obrolan Suara Telegram.
 
@@ -126,12 +126,12 @@ async def repo(client, m: Message):
 
 💜 Heroku
 
- [𝗗𝗘𝗣𝗟𝗢𝗬 𝗞𝗘 𝗛𝗘𝗥𝗢𝗞𝗨](https://heroku.com/deploy?template=https://github.com/XtomiSN/MusicAndVideoPlayer)
+ [𝗗𝗘𝗣𝗟𝗢𝗬 𝗞𝗘 𝗛𝗘𝗥𝗢𝗞𝗨](https://t.me/dost_hai_sab)
 
 📚 Variabel Yang Dibutuhkan
 • `API_ID` - Dapatkan Dari [my.telegram.org](https://my.telegram.org)
 • `API_HASH` - Dapatkan Dari [my.telegram.org](https://my.telegram.org)
-• `SESSION` - Sesi String Pyrogram. Dapatkan String Dari [Sini](https://replit.com/@GoodBoysExe/string-session?lite=1&outputonly=1)
+• `SESSION` - Sesi String Pyrogram. Dapatkan String Dari [Sini](https://t.me/dost_hai_sab)
 • `SUDO_USER` - ID Akun Telegram Yang Digunakan Sebagai Admin
 
 
