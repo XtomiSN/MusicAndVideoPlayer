@@ -42,5 +42,5 @@
 
 ## KREDIT ✨
 - [Group Music Random](https://t.me/GroupMusicRandom)
-- [Dan](https://github.com/delivrance) for [Pyrogram](https://github.com/pyrogram/pyrogram)
+- [Dan](https://github.com/dlivrance) for [Pyrogram](https://github.com/pyrogram/pyrogram)
 - [Laky](https://github.com/Laky-64) for [PyTgCalls](https://github.com/pytgcalls/pytgcalls)
