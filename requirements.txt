@@ -4,6 +4,7 @@ py-tgcalls==0.8.2
 requests
 aiohttp
 aiofiles
+pillow
 asyncio
 wget
 python-arq
