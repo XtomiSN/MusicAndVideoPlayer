@@ -147,6 +147,7 @@ async def play(client, m: Message):
                 await huehue.edit("`Tidak Menemukan Apapun untuk Kueri yang Diberikan`")
             else:
                 songname = search[0]
+                title = search[0]
                 url = search[1]
                 duration = search[2]
                 thumbnail = search[3]
@@ -282,6 +283,7 @@ async def vplay(client, m: Message):
                 )
             else:
                 songname = search[0]
+                title = search[0]
                 url = search[1]
                 duration = search[2]
                 thumbnail = search[3]
