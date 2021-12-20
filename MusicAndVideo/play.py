@@ -14,6 +14,8 @@ from youtubesearchpython import VideosSearch
 
 from config import HNDLR, bot, call_py
 from MusicAndVideo.helpers.queues import QUEUE, add_to_queue, get_queue
+from MusicAndVideo.helpers.other.generator.thumbnail import gen_thumb
+from MusicAndVideo.helpers.other.generator.chattitle import CHAT_TITLE
 
 
 # music player
@@ -86,7 +88,6 @@ async def ytdl(link):
 async def play(client, m: Message):
     replied = m.reply_to_message
     chat_id = m.chat.id
-    m.chat.title
     if replied:
         if replied.audio or replied.voice:
             await m.delete()
@@ -149,6 +150,10 @@ async def play(client, m: Message):
                 url = search[1]
                 duration = search[2]
                 thumbnail = search[3]
+                userid = m.from_user.id
+                srrf = m.chat.title
+                ctitle = await CHAT_TITLE(srrf)
+                thumb = await gen_thumb(thumbnail, title, userid, ctitle)
                 hm, ytlink = await ytdl(url)
                 if hm == 0:
                     await huehue.edit(f"**YTDL ERROR ⚠️** \n\n`{ytlink}`")
@@ -158,7 +163,7 @@ async def play(client, m: Message):
                         await huehue.delete()
                         # await m.reply_to_message.delete()
                         await m.reply_photo(
-                            photo=f"{thumbnail}",
+                            photo=f"{thumb}",
                             caption=f"""
 **#⃣ Lagu Di Antrian Ke {pos}
 🏷️ Judul: [{songname}]({url})
@@ -280,6 +285,10 @@ async def vplay(client, m: Message):
                 url = search[1]
                 duration = search[2]
                 thumbnail = search[3]
+                userid = m.from_user.id
+                srrf = m.chat.title
+                ctitle = await CHAT_TITLE(srrf)
+                thumb = await gen_thumb(thumbnail, title, userid, ctitle)
                 hm, ytlink = await ytdl(url)
                 if hm == 0:
                     await huehue.edit(f"**YTDL ERROR ⚠️** \n\n`{ytlink}`")
@@ -289,7 +298,7 @@ async def vplay(client, m: Message):
                         await huehue.delete()
                         # await m.reply_to_message.delete()
                         await m.reply_photo(
-                            photo=f"{thumbnail}",
+                            photo=f"{thumb}",
                             caption=f"""
 **#⃣ Video Di Antrian Ke {pos}
 🏷️ Judul: [{songname}]({url})
