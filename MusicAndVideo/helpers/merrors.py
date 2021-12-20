@@ -2,9 +2,10 @@ import sys
 import traceback
 from functools import wraps
 
+from Music import app
 from pyrogram import Client
 from pyrogram.errors.exceptions.forbidden_403 import ChatWriteForbidden
-from Music import app
+
 
 def split_limits(text):
     if len(text) < 2048:
