@@ -91,7 +91,7 @@ async def play(client, m: Message):
     if replied:
         if replied.audio or replied.voice:
             await m.delete()
-            huehue = await replied.reply("**🔄 Memproses**")
+            huehue = await replied.reply("**🔄 يعالج**")
             dl = await replied.download()
             link = replied.link
             if replied.audio:
@@ -108,10 +108,10 @@ async def play(client, m: Message):
                 await m.reply_photo(
                     photo="https://telegra.ph/file/d6f92c979ad96b2031cba.png",
                     caption=f"""
-**#⃣ Lagu Di Antrian Ke {pos}
-🏷️ Judul: [{songname}]({link})
-💬 Chat ID: {chat_id}
-🎧 Atas Permintaan: {m.from_user.mention}**
+**#⃣ بدء تشغيل الأغنية {pos}
+🏷️ عنوان: [{songname}]({link})
+💬 معرف الدردشة: {chat_id}
+🎧 طلب من: {m.from_user.mention}**
 """,
                 )
             else:
@@ -128,10 +128,10 @@ async def play(client, m: Message):
                 await m.reply_photo(
                     photo="https://telegra.ph/file/6213d2673486beca02967.png",
                     caption=f"""
-**▶ Mulai Memutar Lagu
-🏷️ Judul: [{songname}]({link})
-💬 Chat ID: {chat_id}
-🎧 Atas Permintaan: {m.from_user.mention}**
+**▶ بدء تشغيل الأغنية
+🏷️ العنوان: [{songname}]({link})
+💬 معرف الدردشة: {chat_id}
+🎧 طلب من: {m.from_user.mention}**
 """,
                 )
 
@@ -166,11 +166,11 @@ async def play(client, m: Message):
                         await m.reply_photo(
                             photo=f"{thumb}",
                             caption=f"""
-**#⃣ Lagu Di Antrian Ke {pos}
-🏷️ Judul: [{songname}]({url})
-⏱️ Durasi: {duration}
-💬 Chat ID: {chat_id}
-🎧 Atas Permintaan: {m.from_user.mention}**
+**#⃣ أغنية في قائمة الانتظار حتى {pos}
+🏷️ العنوان: [{songname}]({url})
+⏱️ المدة: {duration}
+💬 معرف الدردشة: {chat_id}
+🎧 طلب من: {m.from_user.mention}**
 """,
                         )
                     else:
@@ -188,11 +188,11 @@ async def play(client, m: Message):
                             await m.reply_photo(
                                 photo=f"{thumb}",
                                 caption=f"""
-**▶ Mulai Memutar Lagu
-🏷️ Judul: [{songname}]({url})
-⏱️ Durasi: {duration}
-💬 Chat ID: {chat_id}
-🎧 Atas Permintaan: {m.from_user.mention}**
+**▶ ابدأ تشغيل الأغنية
+🏷️ العنوان: [{songname}]({url})
+⏱️ المدة: {duration}
+💬 معرف الدردشة: {chat_id}
+🎧 طلب من: {m.from_user.mention}**
 """,
                             )
                         except Exception as ep:
@@ -234,10 +234,10 @@ async def vplay(client, m: Message):
                 await m.reply_photo(
                     photo="https://telegra.ph/file/d6f92c979ad96b2031cba.png",
                     caption=f"""
-**#⃣ Video Di Antrian Ke {pos}
-🏷️ Judul: [{songname}]({link})
-💬 Chat ID: {chat_id}
-🎧 Atas Permintaan: {m.from_user.mention}**
+**#⃣ مقاطع الفيديو في قائمة انتظار {pos}
+🏷️ العنوان: [{songname}]({link})
+💬 معرف الدردشة: {chat_id}
+🎧 طلب من: {m.from_user.mention}**
 """,
                 )
             else:
@@ -258,10 +258,10 @@ async def vplay(client, m: Message):
                 await m.reply_photo(
                     photo="https://telegra.ph/file/6213d2673486beca02967.png",
                     caption=f"""
-**▶ Mulai Memutar Video
-🏷️ Judul: [{songname}]({link})
-💬 Chat ID: {chat_id}
-🎧 Atas permintaan: {m.from_user.mention}**
+**▶ ابدأ تشغيل الفيديو
+🏷️ العنوان: [{songname}]({link})
+💬 معرف الدردشة: {chat_id}
+🎧 طلب من: {m.from_user.mention}**
 """,
                 )
 
@@ -302,11 +302,11 @@ async def vplay(client, m: Message):
                         await m.reply_photo(
                             photo=f"{thumb}",
                             caption=f"""
-**#⃣ Video Di Antrian Ke {pos}
-🏷️ Judul: [{songname}]({url})
-⏱️ Durasi: {duration}
-💬 Chat ID: {chat_id}
-🎧 Atas Permintaan: {m.from_user.mention}**
+**#⃣ مقاطع الفيديو في قائمة {pos}
+🏷️ العنوان: [{songname}]({url})
+⏱️ المدة: {duration}
+💬 معرف الدردشة: {chat_id}
+🎧 طلب من : {m.from_user.mention}**
 """,
                         )
                     else:
@@ -322,11 +322,11 @@ async def vplay(client, m: Message):
                             await m.reply_photo(
                                 photo=f"{thumb}",
                                 caption=f"""
-**▶ Mulai Memutar Video
-🏷️ Judul: [{songname}]({url})
-⏱️ Durasi: {duration}
-💬 Chat ID: {chat_id}
-🎧 Atas Permintaan: {m.from_user.mention}**
+**▶ ابدأ تشغيل الفيديو
+🏷️ العنوان: [{songname}]({url})
+⏱️ المدة: {duration}
+💬 معرف الدردشة: {chat_id}
+🎧 طلب من: {m.from_user.mention}**
 """,
                             )
                         except Exception as ep:
@@ -372,10 +372,10 @@ async def playfrom(client, m: Message):
                     await m.reply_photo(
                         photo="https://telegra.ph/file/6213d2673486beca02967.png",
                         caption=f"""
-**▶ Mulai Memutar Lagu Dari {chat}
-🏷️ Judul: [{songname}]({link})
-💬 Chat ID: {chat_id}
-🎧 Atas Permintaan: {m.from_user.mention}**
+**▶ ابدأ تشغيل الأغاني من {chat}
+🏷️ العنوان: [{songname}]({link})
+💬 معرف الدردشة: {chat_id}
+🎧 طلب من: {m.from_user.mention}**
 """,
                     )
             await hmm.delete()
@@ -394,11 +394,11 @@ async def playlist(client, m: Message):
         if len(chat_queue) == 1:
             await m.delete()
             await m.reply(
-                f"**🎧 SEKARANG MEMUTAR:** \n[{chat_queue[0][0]}]({chat_queue[0][2]}) | `{chat_queue[0][3]}`",
+                f"**🎧 الان العب:** \n[{chat_queue[0][0]}]({chat_queue[0][2]}) | `{chat_queue[0][3]}`",
                 disable_web_page_preview=True,
             )
         else:
-            QUE = f"**🎧 SEKARANG MEMUTAR:** \n[{chat_queue[0][0]}]({chat_queue[0][2]}) | `{chat_queue[0][3]}` \n\n**⏯ DAFTAR ANTRIAN:**"
+            QUE = f"**🎧 الان العب:** \n[{chat_queue[0][0]}]({chat_queue[0][2]}) | `{chat_queue[0][3]}` \n\n**⏯ DAFTAR ANTRIAN:**"
             l = len(chat_queue)
             for x in range(1, l):
                 hmm = chat_queue[x][0]
