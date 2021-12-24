@@ -11,7 +11,7 @@
 - FFMPEG
 - Nodejs v16+
 
-## 🛠 MENU BANTUAN
+## 🛠 MENU BANTUAN Halo 
 
 #### ⚡ PERINTAH UNTUK SEMUA ORANG
 - `/play [judul lagu | link youtube | balas file audio]` - untuk memutar lagu
